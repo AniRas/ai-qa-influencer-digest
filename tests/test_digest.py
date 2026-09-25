@@ -183,3 +183,14 @@ def test_all_accounts_failed_sends_nothing_and_fails(monkeypatch):
 def test_missing_secret_fails(monkeypatch):
     monkeypatch.delenv("X_BEARER_TOKEN", raising=False)
     assert digest.main() == 2
+
+
+def test_x_encoded_entities_are_not_double_escaped():
+    # X API returns "&amp;" for "&"; Telegram must show "&", not "&amp;"
+    x = fake_x({"1": [{"id": "a", "text": "Q&amp;A &lt;live&gt;",
+                       "created_at": "2026-09-25T08:00:00.000Z"}]})
+    posts, _ = digest.collect_posts(
+        x, [{"name": "A", "username": "a", "id": "1"}], START, END, False)
+    assert posts[0].text == "Q&A <live>"
+    msg = digest.format_post(posts[0], YVN)
+    assert "Q&amp;A &lt;live&gt;" in msg and "&amp;amp;" not in msg
