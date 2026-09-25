@@ -1,13 +1,13 @@
 {
   "_comment": "Source: Session 1 slide 21 'Industry Influencers Software Testing'. After the first run, copy the user IDs printed in the log into the 'id' fields. This skips the paid user lookup ($0.01 per user) on every run.",
   "influencers": [
-    {"name": "Jason Arbon",     "username": "jarbon",          "id": ""},
-    {"name": "Tariq King",      "username": "tariq_king",      "id": ""},
-    {"name": "Angie Jones",     "username": "techgirl1908",    "id": ""},
-    {"name": "Joe Colantonio",  "username": "joecolantonio",   "id": ""},
-    {"name": "Andy Knight",     "username": "AutomationPanda", "id": ""},
-    {"name": "Filip Hric",      "username": "filip_hric",      "id": ""},
-    {"name": "Michael Bolton",  "username": "michaelbolton",   "id": ""},
-    {"name": "James Bach",      "username": "jamesmarcusbach", "id": ""}
+    {"name": "Jason Arbon",     "username": "jarbon",          "id": "10351602"},
+    {"name": "Tariq King",      "username": "tariq_king",      "id": "156087251"},
+    {"name": "Angie Jones",     "username": "techgirl1908",    "id": "2932738834"},
+    {"name": "Joe Colantonio",  "username": "joecolantonio",   "id": "93140318"},
+    {"name": "Andy Knight",     "username": "AutomationPanda", "id": "820409900572540928"},
+    {"name": "Filip Hric",      "username": "filip_hric",      "id": "1296431617"},
+    {"name": "Michael Bolton",  "username": "michaelbolton",   "id": "15817109"},
+    {"name": "James Bach",      "username": "jamesmarcusbach", "id": "20374904"}
   ]
 }

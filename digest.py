@@ -202,6 +202,7 @@ def collect_posts(x: XClient, influencers: list[dict], start: datetime, end: dat
             if not is_in_window(created, start, end):
                 continue  # older/newer post -> skip
             text = (item.get("note_tweet") or {}).get("text") or item.get("text", "")
+            text = html.unescape(text)  # X returns &amp; &lt; &gt; already encoded
             posts.append(Post(inf["name"], inf["username"], item["id"], text, created))
 
     posts.sort(key=lambda p: p.created_at)
